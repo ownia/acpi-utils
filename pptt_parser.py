@@ -52,6 +52,8 @@ def parse_pptt(data):
                     dot.node(str(offset), 'cpu'+str(processor_unpacked[5]), style='filled')
                 else:
                     dot.node(str(offset), 'cpu'+str(processor_unpacked[5]))
+            else:
+                dot.node(str(offset), 'Fake Cluster')
 
             if processor_unpacked[4] != 0:
                 dot.edge(str(processor_unpacked[4]), str(offset))
